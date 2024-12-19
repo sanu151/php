@@ -177,7 +177,7 @@ It can span multiple lines.
 ### PHP Operators: A Comprehensive Table
 
 | Operator Type            | Operator | Definition                  | Category   | Example                           |
-| ------------------------ | -------- | --------------------------- | ---------- | --------------------------------- | ------- | --- | --- | --- |
+| ------------------------ | -------- | --------------------------- | ---------- | --------------------------------- |
 | **Arithmetic Operators** | +        | Addition                    | Arithmetic | `$x + $y`                         |
 |                          | -        | Subtraction                 | Arithmetic | `$x - $y`                         |
 |                          | \*       | Multiplication              | Arithmetic | `$x * $y`                         |
