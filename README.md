@@ -199,10 +199,10 @@ It can span multiple lines.
 |                          | <=       | Less than or equal to       | Comparison | `$x <= $y`                        |
 |                          | <=>      | Spaceship operator (PHP 7+) | Comparison | `$x <=> $y` (returns -1, 0, or 1) |
 | **Logical Operators**    | &&       | And                         | Logical    | `$x && $y`                        |
-|                          |          |                             |            | Or                                | Logical | `$x |     | $y` |
+|                          | \|\|     | Or                          | Logical    | `$x \|\| $y`                      |
 |                          | !        | Not                         | Logical    | `!$x`                             |
 | **Bitwise Operators**    | &        | And                         | Bitwise    | `$x & $y`                         |
-|                          |          |                             | Or         | Bitwise                           | `$x     | $y` |
+|                          | \|       | Or                          | Bitwise    | `$x \| $y`                        |
 |                          | ^        | Xor                         | Bitwise    | `$x ^ $y`                         |
 |                          | ~        | Not                         | Bitwise    | `~$x`                             |
 |                          | <<       | Shift Left                  | Bitwise    | `$x << $y`                        |
