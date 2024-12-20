@@ -240,3 +240,56 @@ echo "This is a tab\tcharacter.";
 
 - In single-quoted strings, only `\'` and `\\` are interpreted as escape sequences. Other escape sequences are treated as literal characters.
 - In double-quoted strings, all escape sequences are interpreted.
+
+### **Ternary Operator in PHP**
+
+The ternary operator in PHP is a concise way to assign a value to a variable based on a condition. It's a shorthand for a simple `if-else` statement.
+
+**Syntax:**
+
+```php
+condition ? expression1 : expression2
+```
+
+**Breakdown:**
+
+1. **Condition:** This is the expression that is evaluated to either `true` or `false`.
+2. **Expression1:** If the condition is `true`, this expression is evaluated and its result is returned.
+3. **Expression2:** If the condition is `false`, this expression is evaluated and its result is returned.
+
+**Example:**
+
+```php
+$age = 25;
+$isAdult = ($age >= 18) ? "Adult" : "Minor";
+
+echo $isAdult; // Output: Adult
+```
+
+**Explanation:**
+
+1. The condition `($age >= 18)` is evaluated.
+2. Since 25 is greater than or equal to 18, the condition is `true`.
+3. The expression `Adult` is evaluated and assigned to the `$isAdult` variable.
+
+**Another Example:**
+
+```php
+$number = 5;
+$result = ($number % 2 == 0) ? "Even" : "Odd";
+
+echo $result; // Output: Odd
+```
+
+**When to Use the Ternary Operator:**
+
+- **Simple Conditional Assignments:** For straightforward conditions and assignments.
+- **Concise Code:** It can make your code more compact and readable in certain cases.
+- **Inline Conditional Expressions:** You can use it within larger expressions to create dynamic values.
+
+**However, be cautious:**
+
+- **Readability:** For complex conditions or multiple nested ternary operators, it might become less readable.
+- **Performance:** While the performance difference is often negligible, complex ternary expressions might be slightly less efficient than equivalent `if-else` statements.
+
+**In general, use the ternary operator judiciously. It's a powerful tool, but it's important to balance conciseness with readability.**
