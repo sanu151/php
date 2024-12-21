@@ -369,3 +369,57 @@ switch ($day) {
         echo "Today is some other day.";
 }
 ```
+
+### **Nested Conditional Statements in PHP**
+
+Nested conditional statements occur when you place one or more `if`, `elseif`, or `else` blocks within another `if`, `elseif`, or `else` block. This allows you to create complex decision-making structures in your PHP code.
+
+**Example:**
+
+```php
+$age = 20;
+$gender = "Male";
+
+if ($age >= 18) { // Outer if condition
+    if ($gender == "Male") { // Inner if condition
+        echo "You are an adult male.";
+    } else {
+        echo "You are an adult female.";
+    }
+} else {
+    echo "You are a minor.";
+}
+```
+
+**Explanation:**
+
+1. **Outer Condition:** The first `if` statement checks if `$age` is greater than or equal to 18.
+2. **Inner Condition:** If the outer condition is true, the inner `if` statement checks if `$gender` is "Male".
+3. **Output:**
+   - If both conditions are true, it prints "You are an adult male."
+   - If the outer condition is true but the inner condition is false, it prints "You are an adult female."
+   - If the outer condition is false, it prints "You are a minor."
+
+**Key Points:**
+
+- **Indentation:** Proper indentation is crucial for readability in nested conditionals.
+- **Complexity:** While nested conditionals can be powerful, avoid excessive nesting as it can make your code difficult to understand and maintain.
+- **Alternatives:** In some cases, using a `switch` statement or a combination of logical operators (`&&`, `||`, `!`) might provide a more elegant solution.
+
+**Example with `elseif` and `else`:**
+
+```php
+$grade = 85;
+
+if ($grade >= 90) {
+    echo "Excellent";
+} elseif ($grade >= 80) {
+    echo "Good";
+} elseif ($grade >= 70) {
+    echo "Average";
+} else {
+    echo "Needs Improvement";
+}
+```
+
+This example demonstrates a more complex scenario with multiple conditions.
