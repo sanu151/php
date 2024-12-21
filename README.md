@@ -464,6 +464,9 @@ In PHP, an array is a special type of variable that can hold multiple values und
    );
    ```
 
+![image](https://github.com/user-attachments/assets/8c1fba8b-d236-4fac-afca-15cc49c0962b)
+
+
 **Accessing Array Elements:**
 
 - **Indexed Arrays:**
