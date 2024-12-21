@@ -423,3 +423,86 @@ if ($grade >= 90) {
 ```
 
 This example demonstrates a more complex scenario with multiple conditions.
+
+### **Arrays in PHP**
+
+In PHP, an array is a special type of variable that can hold multiple values under a single name. These values can be of different data types (integers, strings, floats, booleans, even other arrays).
+
+**Types of Arrays in PHP:**
+
+1. **Indexed Arrays:**
+
+   - Ordered collection of values.
+   - Each value is assigned a numerical index (starting from 0).
+
+   ```php
+   $colors = array("red", "green", "blue");
+   // or
+   $colors = ["red", "green", "blue"];
+   ```
+
+2. **Associative Arrays:**
+
+   - Key-value pairs.
+   - Each value is associated with a unique key (which can be a string or an integer).
+
+   ```php
+   $ages = array("John" => 30, "Jane" => 25, "Peter" => 35);
+   // or
+   $ages = ["John" => 30, "Jane" => 25, "Peter" => 35];
+   ```
+
+3. **Multidimensional Arrays:**
+
+   - Arrays that contain other arrays as elements.
+
+   ```php
+   $students = array(
+       array("name" => "Alice", "age" => 20),
+       array("name" => "Bob", "age" => 22),
+       array("name" => "Charlie", "age" => 19)
+   );
+   ```
+
+**Accessing Array Elements:**
+
+- **Indexed Arrays:**
+
+  - Use the index number within square brackets: `$colors[0]` (returns "red")
+
+- **Associative Arrays:**
+
+  - Use the key within square brackets: `$ages["John"]` (returns 30)
+
+- **Multidimensional Arrays:**
+  - Use multiple sets of square brackets: `$students[1]["name"]` (returns "Bob")
+
+**Array Functions:**
+
+PHP provides many built-in functions for working with arrays:
+
+- `count()` - Returns the number of elements in an array.
+- `array_push()` - Adds one or more elements to the end of an array.
+- `array_pop()` - Removes and returns the last element of an array.
+- `array_shift()` - Removes and returns the first element of an array.
+- `array_unshift()` - Adds one or more elements to the beginning of an array.
+- `sort()` - Sorts an array in ascending order.
+- `rsort()` - Sorts an array in descending order.
+- `in_array()` - Checks if a value exists in an array.
+- `array_merge()` - Merges two or more arrays.
+
+**Example:**
+
+```php
+$fruits = array("apple", "banana", "orange");
+echo $fruits[0]; // Output: apple
+
+$person = array("name" => "John", "age" => 30);
+echo $person["name"]; // Output: John
+
+if (in_array("banana", $fruits)) {
+    echo "Banana is found in the fruits array.";
+}
+```
+
+Arrays are fundamental data structures in PHP and are essential for many web development tasks, such as storing and manipulating data from databases, handling form submissions, and creating dynamic content.
