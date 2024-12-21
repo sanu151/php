@@ -293,3 +293,79 @@ echo $result; // Output: Odd
 - **Performance:** While the performance difference is often negligible, complex ternary expressions might be slightly less efficient than equivalent `if-else` statements.
 
 **In general, use the ternary operator judiciously. It's a powerful tool, but it's important to balance conciseness with readability.**
+
+### **Conditional Statements in PHP**
+
+Conditional statements allow you to control the flow of your PHP program based on specific conditions. PHP supports several conditional statements:
+
+**1. `if` Statement:**
+
+- Executes a block of code if a given condition is true.
+
+```php
+if (condition) {
+    // Code to be executed if the condition is true
+}
+```
+
+**2. `if-else` Statement:**
+
+- Executes one block of code if a condition is true, and another block if it's false.
+
+```php
+if (condition) {
+    // Code to be executed if the condition is true
+} else {
+    // Code to be executed if the condition is false
+}
+```
+
+**3. `if-elseif-else` Statement:**
+
+- Allows you to check multiple conditions and execute different blocks of code based on the first true condition.
+
+```php
+if (condition1) {
+    // Code to be executed if condition1 is true
+} elseif (condition2) {
+    // Code to be executed if condition1 is false and condition2 is true
+} else {
+    // Code to be executed if both conditions are false
+}
+```
+
+**Example:**
+
+```php
+$age = 25;
+
+if ($age >= 18) {
+    echo "You are an adult.";
+} else {
+    echo "You are a minor.";
+}
+```
+
+**Additional Considerations:**
+
+- **Comparison Operators:** You can use comparison operators like `==`, `!=`, `<`, `>`, `<=`, and `>=` to compare values.
+- **Logical Operators:** You can combine multiple conditions using logical operators `&&` (AND), `||` (OR), and `!` (NOT).
+- **Ternary Operator:** A concise way to write a simple `if-else` statement.
+- **Switch Statement:** Useful for checking multiple possible values of a single expression.
+
+**Example with Switch Statement:**
+
+```php
+$day = "Monday";
+
+switch ($day) {
+    case "Monday":
+        echo "Today is Monday.";
+        break;
+    case "Tuesday":
+        echo "Today is Tuesday.";
+        break;
+    default:
+        echo "Today is some other day.";
+}
+```
