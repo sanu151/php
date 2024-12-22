@@ -507,4 +507,76 @@ if (in_array("banana", $fruits)) {
 }
 ```
 
+**Print Array in PHP**
+
+```php
+<?php
+
+// Sample array
+$fruits = array("apple", "banana", "orange");
+
+// Using print_r()
+echo "<h3>Using print_r():</h3>";
+print_r($fruits);
+
+// Using var_dump()
+echo "<h3>Using var_dump():</h3>";
+var_dump($fruits);
+
+// Using a loop (for better formatting)
+echo "<h3>Using a loop:</h3>";
+echo "<ul>";
+foreach ($fruits as $fruit) {
+  echo "<li>$fruit</li>";
+}
+echo "</ul>";
+
+?>
+```
+
+**Explanation:**
+
+1. **`print_r()`:**
+
+   - This function displays human-readable information about a variable.
+   - It's a good general-purpose function for printing arrays.
+
+2. **`var_dump()`:**
+
+   - Provides more detailed information about a variable, including its type and size.
+   - Can be useful for debugging.
+
+3. **Using a Loop:**
+   - This method allows you to control the output format more precisely.
+   - The `foreach` loop iterates over each element in the array and prints it within an HTML list (`<ul>`).
+
+**Output:**
+
+- **`print_r()`:**
+
+  ```
+  Array ( [0] => apple [1] => banana [2] => orange )
+  ```
+
+- **`var_dump()`:**
+
+  ```
+  array(3) { [0]=> string(5) "apple" [1]=> string(6) "banana" [2]=> string(6) "orange" }
+  ```
+
+- **Using a loop:**
+  ```html
+  <ul>
+    <li>apple</li>
+    <li>banana</li>
+    <li>orange</li>
+  </ul>
+  ```
+
+**Key Points:**
+
+- Choose the method that best suits your needs based on the level of detail and the desired output format.
+- For more complex arrays, consider using a loop to iterate over the elements and customize the output.
+- If you want to display the array in a more visually appealing way, you can use HTML tags like `<ul>`, `<ol>`, or tables within the loop.
+
 Arrays are fundamental data structures in PHP and are essential for many web development tasks, such as storing and manipulating data from databases, handling form submissions, and creating dynamic content.
