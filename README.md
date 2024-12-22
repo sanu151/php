@@ -703,6 +703,9 @@ greet("Alice"); // Output: Hello, Alice!
 
 PHP provides a rich set of functions for working with arrays. Here are some of the most commonly used ones:
 
+![image](https://github.com/user-attachments/assets/a4f0a83f-edd9-40e9-901f-526f8a789539)
+
+
 **1. Creating Arrays**
 
 - **`array()`:**
