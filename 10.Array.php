@@ -17,6 +17,10 @@ $cars = array(
     array("Land Rover", 17, 15)
 );
 
+echo "<pre>";
+print_r($cars);
+echo "</pre>";
+
 for ($row = 0; $row < 4; $row++) {
     echo $cars[$row][0] . ": In stock: " . $cars[$row][1] . ", sold: " . $cars[$row][2] . "<br>";
 }
