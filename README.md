@@ -703,6 +703,8 @@ greet("Alice"); // Output: Hello, Alice!
 
 PHP provides a rich set of functions for working with arrays. Here are some of the most commonly used ones:
 
+![alt text](image.png)
+
 **1. Creating Arrays**
 
 - **`array()`:**
