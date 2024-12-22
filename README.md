@@ -698,3 +698,113 @@ greet("Alice"); // Output: Hello, Alice!
 - **Function Calling:** To execute a function, you "call" it by using its name followed by parentheses, and optionally passing any required arguments.
 - **Function Arguments:** Arguments are values passed to a function when it is called.
 - **Function Parameters:** Variables that receive the values passed as arguments within the function's definition.
+
+**PHP Array Functions**
+
+PHP provides a rich set of functions for working with arrays. Here are some of the most commonly used ones:
+
+**1. Creating Arrays**
+
+- **`array()`:**
+  - The primary function to create an array.
+  - `$colors = array("red", "green", "blue");`
+  - `$ages = array("John" => 30, "Jane" => 25);`
+
+**2. Accessing Elements**
+
+- **`[]`:** Access elements by index (for indexed arrays) or key (for associative arrays).
+  - `$colors[0]` // Accesses the first element ("red")
+  - `$ages["John"]` // Accesses the value associated with the key "John"
+
+**3. Adding/Removing Elements**
+
+- **`array_push()`:** Adds one or more elements to the end of an array.
+- **`array_pop()`:** Removes and returns the last element of an array.
+- **`array_unshift()`:** Adds one or more elements to the beginning of an array.
+- **`array_shift()`:** Removes and returns the first element of an array.
+
+**4. Checking Array Existence**
+
+- **`in_array()`:** Checks if a value exists within an array.
+- **`array_key_exists()`:** Checks if a specific key exists in an array.
+
+**5. Sorting Arrays**
+
+- **`sort()`:** Sorts an array in ascending order.
+- **`rsort()`:** Sorts an array in descending order.
+- **`ksort()`:** Sorts an array by keys in ascending order.
+- **`krsort()`:** Sorts an array by keys in descending order.
+
+**6. Merging Arrays**
+
+- **`array_merge()`:** Merges two or more arrays into a single array.
+
+**7. Array Manipulation**
+
+- **`array_slice()`:** Extracts a portion of an array.
+- **`array_splice()`:** Removes or replaces a portion of an array.
+- **`array_unique()`:** Removes duplicate values from an array.
+- **`array_flip()`:** Exchanges keys with their associated values.
+
+**8. Other Useful Functions**
+
+- **`count()`:** Returns the number of elements in an array.
+- **`implode()`:** Joins array elements into a string.
+- **`explode()`:** Splits a string into an array.
+
+**Example:**
+
+```php
+<?php
+
+// Sample array
+$fruits = array("apple", "banana", "orange", "apple");
+
+// 1. Count elements in the array
+$num_fruits = count($fruits);
+echo "Number of fruits: " . $num_fruits . "<br>";
+
+// 2. Check if "banana" exists in the array
+if (in_array("banana", $fruits)) {
+    echo "Banana is found in the array.<br>";
+}
+
+// 3. Add a new fruit to the end of the array
+array_push($fruits, "mango");
+
+// 4. Remove and return the last fruit
+$last_fruit = array_pop($fruits);
+echo "Removed fruit: " . $last_fruit . "<br>";
+
+// 5. Sort the array in ascending order
+sort($fruits);
+
+// 6. Remove duplicate values
+$unique_fruits = array_unique($fruits);
+
+// 7. Print the sorted and unique fruits
+echo "Sorted and unique fruits: ";
+print_r($unique_fruits);
+
+?>
+```
+
+**Output:**
+
+```
+Number of fruits: 4
+Banana is found in the array.
+Removed fruit: mango
+Sorted and unique fruits: Array ( [0] => apple [1] => banana [2] => orange )
+```
+
+**Explanation:**
+
+1. **`count($fruits)`:** Counts the number of elements in the `$fruits` array.
+2. **`in_array("banana", $fruits)`:** Checks if "banana" exists within the `$fruits` array.
+3. **`array_push($fruits, "mango")`:** Adds "mango" to the end of the `$fruits` array.
+4. **`array_pop($fruits)`:** Removes and returns the last element ("mango") from the `$fruits` array.
+5. **`sort($fruits)`:** Sorts the `$fruits` array in ascending order (alphabetically).
+6. **`array_unique($fruits)`:** Removes duplicate values ("apple") from the array.
+
+These are just a few examples of the many array functions available in PHP. By utilizing these functions, you can efficiently manipulate and work with arrays in your PHP applications.
