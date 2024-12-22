@@ -613,3 +613,88 @@ This demonstrates how to create an array with numerical keys and values without 
 **Note:** While this approach is valid, using `array()` is generally considered more concise and readable.
 
 Arrays are fundamental data structures in PHP and are essential for many web development tasks, such as storing and manipulating data from databases, handling form submissions, and creating dynamic content.
+
+## **Functions in PHP**
+
+**What is a Function?**
+
+- A function is a block of code that performs a specific task.
+- It's reusable, meaning you can call it multiple times throughout your script without having to rewrite the same code.
+- Functions improve code organization, readability, and maintainability.
+
+**Types of Functions in PHP**
+
+1. **Built-in Functions:**
+
+   - Provided by PHP itself.
+   - Examples: `strlen()`, `strtoupper()`, `array_push()`, `date()`, `mysql_connect()` (Note: Some older functions like `mysql_*` are deprecated).
+
+2. **User-Defined Functions:**
+   - Created by the programmer to perform specific tasks within their application.
+
+**Syntax of User-Defined Functions**
+
+```php
+<?php
+function function_name(argument1, argument2, ...) {
+    // Code to be executed within the function
+    // ...
+    return value; // Optional: Return a value
+}
+?>
+```
+
+- **`function_name`:** The name of the function.
+- **`argument1`, `argument2`, ...:** Parameters (optional) that are passed to the function.
+- **`return value;`:** (Optional) Specifies the value to be returned by the function. If no value is returned, the function returns `null` by default.
+
+**Examples**
+
+**1. Simple Function:**
+
+```php
+<?php
+function greet($name) {
+    echo "Hello, " . $name . "!";
+}
+
+greet("John"); // Output: Hello, John!
+?>
+```
+
+**2. Function with Return Value:**
+
+```php
+<?php
+function add($x, $y) {
+    return $x + $y;
+}
+
+$sum = add(5, 3);
+echo $sum; // Output: 8
+?>
+```
+
+**3. Function with Default Argument Value:**
+
+```php
+<?php
+function greet($name = "Guest") {
+    echo "Hello, " . $name . "!";
+}
+
+greet(); // Output: Hello, Guest!
+greet("Alice"); // Output: Hello, Alice!
+?>
+```
+
+**Uses of the `return` Keyword**
+
+- **Sending a Value Back:** The `return` keyword is used to send a value back to the part of the code that called the function.
+- **Terminating Execution:** Once a `return` statement is encountered within a function, the function's execution immediately stops, and the specified value is returned.
+
+**Key Concepts**
+
+- **Function Calling:** To execute a function, you "call" it by using its name followed by parentheses, and optionally passing any required arguments.
+- **Function Arguments:** Arguments are values passed to a function when it is called.
+- **Function Parameters:** Variables that receive the values passed as arguments within the function's definition.
