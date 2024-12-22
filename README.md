@@ -579,4 +579,37 @@ echo "</ul>";
 - For more complex arrays, consider using a loop to iterate over the elements and customize the output.
 - If you want to display the array in a more visually appealing way, you can use HTML tags like `<ul>`, `<ol>`, or tables within the loop.
 
+**Array without array() function**
+
+```php
+<?php
+
+// Create an empty array
+$arr = [];
+
+// Add elements to the array
+$arr[] = 1;
+$arr[] = 2;
+$arr[] = 3;
+
+// Print the array
+print_r($arr);
+
+?>
+```
+
+**Explanation:**
+
+1. **`$arr = [];`:** This creates an empty array. The `[]` syntax is a shorthand for `array()`.
+
+2. **`$arr[] = 1;`**: This adds the value `1` to the end of the array. Since no explicit key is provided, PHP automatically assigns a numerical index (0 in this case).
+
+3. **`$arr[] = 2;` and `$arr[] = 3;`**: These lines similarly add the values `2` and `3` to the end of the array, with automatic numerical indices 1 and 2 respectively.
+
+4. **`print_r($arr);`:** This displays the contents of the array in a human-readable format.
+
+This demonstrates how to create an array with numerical keys and values without explicitly using the `array()` function.
+
+**Note:** While this approach is valid, using `array()` is generally considered more concise and readable.
+
 Arrays are fundamental data structures in PHP and are essential for many web development tasks, such as storing and manipulating data from databases, handling form submissions, and creating dynamic content.
