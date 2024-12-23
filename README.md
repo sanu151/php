@@ -810,4 +810,47 @@ Sorted and unique fruits: Array ( [0] => apple [1] => banana [2] => orange )
 5. **`sort($fruits)`:** Sorts the `$fruits` array in ascending order (alphabetically).
 6. **`array_unique($fruits)`:** Removes duplicate values ("apple") from the array.
 
-These are just a few examples of the many array functions available in PHP. By utilizing these functions, you can efficiently manipulate and work with arrays in your PHP applications.
+### PHP array functions, their descriptions, syntax, and examples:
+
+| Function Name | Description | Syntax | Example |
+|---|---|---|---|
+| `array()` | Creates an array. | `$colors = array("red", "green", "blue");` <br> `$ages = array("John" => 30, "Jane" => 25);` | `$fruits = array("apple", "banana", "orange");` |
+| `range()` | Creates an array containing a range of elements. | `$numbers = range(1, 10);` | `$numbers = range(1, 10);` |
+| `count()` | Returns the number of elements in an array. | `$count = count($array);` | `$count = count($fruits);` |
+| `in_array()` | Checks if a value exists in an array. | `in_array($value, $array)` | `if (in_array("banana", $fruits)) { ... }` |
+| `array_search()` | Searches for a given value and returns its key. | `$key = array_search($value, $array);` | `$key = array_search("banana", $fruits);` |
+| `array_key_exists()` | Checks if a specified key exists in an array. | `array_key_exists($key, $array)` | `if (array_key_exists("name", $person)) { ... }` |
+| `array_push()` | Adds one or more elements to the end of an array. | `array_push($array, $value1, $value2, ...);` | `array_push($fruits, "mango");` |
+| `array_pop()` | Removes and returns the last element of an array. | `$last_element = array_pop($array);` | `$last_fruit = array_pop($fruits);` |
+| `array_unshift()` | Adds one or more elements to the beginning of an array. | `array_unshift($array, $value1, $value2, ...);` | `array_unshift($fruits, "grape");` |
+| `array_shift()` | Removes and returns the first element of an array. | `$first_element = array_shift($array);` | `$first_fruit = array_shift($fruits);` |
+| `array_splice()` | Removes or replaces a portion of an array. | `array_splice($array, $offset, $length, $replacement);` | `array_splice($fruits, 1, 1, "kiwi");` |
+| `array_slice()` | Extracts a portion of an array. | `$sliced_array = array_slice($array, $offset, $length);` | `$sliced_fruits = array_slice($fruits, 1, 2);` |
+| `array_chunk()` | Splits an array into chunks. | `$chunked_array = array_chunk($array, $size);` | `$chunks = array_chunk($fruits, 2);` |
+| `sort()` | Sorts an array in ascending order. | `sort($array);` | `sort($fruits);` |
+| `rsort()` | Sorts an array in descending order. | `rsort($array);` | `rsort($fruits);` |
+| `asort()` | Sorts an array and maintains index association. | `asort($array);` | `asort($fruits);` |
+| `arsort()` | Sorts an array in reverse order and maintains index association. | `arsort($array);` | `arsort($fruits);` |
+| `ksort()` | Sorts an array by keys in ascending order. | `ksort($array);` | `ksort($ages);` (where $ages is an associative array) |
+| `krsort()` | Sorts an array by keys in descending order. | `krsort($array);` | `krsort($ages);` |
+| `natsort()` | Sorts an array using a "natural order" algorithm. | `natsort($array);` | `natsort($versions);` |
+| `natcasesort()` | Sorts an array using a case-insensitive "natural order" algorithm. | `natcasesort($array);` | `natcasesort($versions);` |
+| `usort()` | Sorts an array using a user-defined comparison function. | `usort($array, 'my_compare_function');` | `usort($numbers, "compare_numbers");` |
+| `uasort()` | Sorts an array with a user-defined comparison function and maintains index association. | `uasort($array, 'my_compare_function');` | `uasort($ages, "compare_ages");` |
+| `uksort()` | Sorts an array by keys using a user-defined comparison function. | `uksort($array, 'my_compare_keys');` | `uksort($ages, "compare_keys");` |
+| `array_merge()` | Merges one or more arrays into a single array. | `$merged_array = array_merge($array1, $array2, ...);` | `$all_fruits = array_merge($fruits, $more_fruits);` |
+| `array_merge_recursive()` | Merges one or more arrays into a single array recursively. | `$merged_array = array_merge_recursive($array1, $array2, ...);` | `$merged_arrays = array_merge_recursive($array1, $array2);` |
+| `array_combine()` | Creates an array by using one array for keys and another for its values. | `$combined_array = array_combine($keys, $values);` | `$combined = array_combine($names, $ages);` |
+| `array_intersect()` | Returns an array with the values that are present in all the given arrays. | `$intersection = array_intersect($array1, $array2, ...);` | `$common_fruits = array_intersect($fruits, $other_fruits);` |
+| `array_intersect_assoc()` | Returns an array with the values that are present in all the arrays with identical keys. | `$intersection_assoc = array_intersect_assoc($array1, $array2, ...);` | `$common_data = array_intersect_assoc($data1, $data2);` |
+| `array_diff()` | Returns an array with the values that are not present in the second array. | `$diff = array_diff($array1, $array2, ...);` | `$unique_to_fruits1 = array_diff($fruits1, $fruits2);` |
+| `array_diff_assoc()` | Returns an array with the values that are not present in the second array, using both value and key comparisons. | `$diff_assoc = array_diff_assoc($array1, $array2, ...);` | `$unique_data = array_diff_assoc($data1, $data2);` |
+| `array_unique()` | Removes duplicate values from an array. | `$unique_array = array_unique($array);` | `$unique_fruits = array_unique($fruits);` |
+| `array_flip()` | Exchanges all keys with their associated values in an array. | `$flipped_array = array_flip($array);` | `$flipped_ages = array_flip($ages);` |
+| `array_pad()` | Pads an array to a specified length with a value. | `$padded_array = array_pad($array, $size, $value);` | `$padded_array = array_pad($numbers, 10, 0);` |
+| `array_fill()` | Fills an array with values. | `$filled_array = array_fill(0, $size, $value);` | `$filled_array = array_fill(0, 5, "hello");` |
+| `array_rand()` | Returns one or more random keys from an array. | `$random_key = array_rand($array);` | `$random_fruit = $fruits[array_rand($fruits)];` |
+| `array_walk()` | Applies a user-defined function to each element of an array. | `array_walk($array, 'my_callback_function');` | `array_walk($numbers, 'square');` |
+| `array_map()` | Applies a callback to the elements of the given arrays. | `$new_array = array_map('my_callback_function', $array1, $array2, ...);` | `$squared_numbers = array_map('square', $numbers);` |
+| `array_filter()` | Filters elements of an array using a callback function. | `$filtered_array = array_filter($array, 'my_filter_function');` | `$even_numbers = array_filter($numbers, 'is_even');` |
+| `array_reduce()` | Reduces an array to a single value using a callback function. | `$sum = array_reduce
