@@ -699,7 +699,7 @@ greet("Alice"); // Output: Hello, Alice!
 - **Function Arguments:** Arguments are values passed to a function when it is called.
 - **Function Parameters:** Variables that receive the values passed as arguments within the function's definition.
 
-**PHP Array Functions**
+### **PHP Array Functions**
 
 PHP provides a rich set of functions for working with arrays. Here are some of the most commonly used ones:
 
