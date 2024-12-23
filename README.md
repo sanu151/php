@@ -854,3 +854,68 @@ Sorted and unique fruits: Array ( [0] => apple [1] => banana [2] => orange )
 | `array_map()` | Applies a callback to the elements of the given arrays. | `$new_array = array_map('my_callback_function', $array1, $array2, ...);` | `$squared_numbers = array_map('square', $numbers);` |
 | `array_filter()` | Filters elements of an array using a callback function. | `$filtered_array = array_filter($array, 'my_filter_function');` | `$even_numbers = array_filter($numbers, 'is_even');` |
 | `array_reduce()` | Reduces an array to a single value using a callback function. | `$sum = array_reduce
+
+
+### **User-Defined Functions in PHP**
+
+**What are User-Defined Functions?**
+
+* **Reusable Code Blocks:** User-defined functions are blocks of code that you create to perform specific tasks within your PHP scripts. 
+* **Modularity:** They help break down large programs into smaller, more manageable units.
+* **Reusability:** Once defined, a function can be called multiple times throughout your script or even in other scripts, avoiding code duplication.
+* **Improved Readability:** Functions make your code more organized and easier to understand.
+
+**Syntax**
+
+```php
+function function_name(argument1, argument2, ...) {
+  // Code to be executed within the function
+  // ...
+  return value; // Optional: Return a value
+}
+```
+
+* **`function_name`:** The unique name you give to your function.
+* **`argument1`, `argument2`, ...:** Parameters (optional) that the function accepts as input.
+* **`return value;`:** (Optional) Specifies the value that the function should return to the calling part of the code. If no `return` statement is used, the function implicitly returns `null`.
+
+**Example**
+
+```php
+<?php
+function greet($name) {
+  echo "Hello, " . $name . "!";
+}
+
+greet("John"); // Output: Hello, John!
+?>
+```
+
+**Key Concepts**
+
+* **Function Calling:** To execute a function, you "call" it by using its name followed by parentheses and any necessary arguments: `greet("John");`
+* **Parameters and Arguments:** 
+    - **Parameters:** Variables defined within the function's parentheses (e.g., `$name` in the `greet()` function).
+    - **Arguments:** The actual values passed to the function when it's called (e.g., "John" in `greet("John");`).
+
+**Example with Return Value**
+
+```php
+<?php
+function add($x, $y) {
+  return $x + $y; 
+}
+
+$sum = add(5, 3); 
+echo $sum; // Output: 8
+?>
+```
+
+**Benefits of Using User-Defined Functions**
+
+* **Code Reusability:** Avoid writing the same code repeatedly.
+* **Improved Readability:** Makes code easier to understand and maintain.
+* **Modularity:** Breaks down complex problems into smaller, more manageable units.
+* **Better Organization:** Enhances code structure and organization.
+* **Code Maintainability:** Easier to find and fix errors or make modifications.
+
