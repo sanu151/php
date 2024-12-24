@@ -939,6 +939,9 @@ for (initialization; condition; increment/decrement) {
     - **Condition:** Checked before each iteration. If true, the loop continues; otherwise, it terminates.
     - **Increment/Decrement:** Executed after each iteration (e.g., `$i++`).
 
+![image](https://github.com/user-attachments/assets/1bc50561-eb97-48d1-975c-26ebddedf54b)
+
+
 * **Example:**
 
 ```php
