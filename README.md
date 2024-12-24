@@ -989,6 +989,8 @@ do {
 * **Explanation:**
     - The code within the loop is executed at least once, and then the condition is checked. If true, the loop continues; otherwise, it terminates.
 
+![image](https://github.com/user-attachments/assets/6c7560e9-2fc4-4944-8622-a89387200690)
+
 * **Example:**
 
 ```php
