@@ -1,6 +1,6 @@
 ![image](https://github.com/user-attachments/assets/41830a64-8ecb-40fb-add0-66bec79441e7)
 
-# php
+# PHP
 
 ### PHP Codes and notes
 
@@ -959,6 +959,9 @@ while (condition) {
 
 * **Explanation:**
     - The condition is checked before each iteration. If true, the loop continues; otherwise, it terminates.
+
+![image](https://github.com/user-attachments/assets/7bee37fe-2bdd-494a-8c37-41ad75f96139)
+
 
 * **Example:**
 
