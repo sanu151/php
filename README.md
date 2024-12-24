@@ -919,3 +919,112 @@ echo $sum; // Output: 8
 * **Better Organization:** Enhances code structure and organization.
 * **Code Maintainability:** Easier to find and fix errors or make modifications.
 
+
+## **Loops in PHP**
+
+Loops are a fundamental control flow structure in PHP that allow you to repeatedly execute a block of code. Here are the main types of loops in PHP:
+
+**1. `for` Loop**
+
+* **Syntax:**
+
+```php
+for (initialization; condition; increment/decrement) {
+    // Code to be executed repeatedly
+}
+```
+
+* **Explanation:**
+    - **Initialization:** Executed once before the loop begins (e.g., `$i = 0;`).
+    - **Condition:** Checked before each iteration. If true, the loop continues; otherwise, it terminates.
+    - **Increment/Decrement:** Executed after each iteration (e.g., `$i++`).
+
+* **Example:**
+
+```php
+for ($i = 0; $i < 5; $i++) {
+    echo "Iteration: " . $i . "<br>";
+}
+```
+
+**2. `while` Loop**
+
+* **Syntax:**
+
+```php
+while (condition) {
+    // Code to be executed repeatedly
+}
+```
+
+* **Explanation:**
+    - The condition is checked before each iteration. If true, the loop continues; otherwise, it terminates.
+
+* **Example:**
+
+```php
+$count = 0;
+while ($count < 5) {
+    echo "Count: " . $count . "<br>";
+    $count++;
+}
+```
+
+**3. `do-while` Loop**
+
+* **Syntax:**
+
+```php
+do {
+    // Code to be executed repeatedly
+} while (condition);
+```
+
+* **Explanation:**
+    - The code within the loop is executed at least once, and then the condition is checked. If true, the loop continues; otherwise, it terminates.
+
+* **Example:**
+
+```php
+$count = 0;
+do {
+    echo "Count: " . $count . "<br>";
+    $count++;
+} while ($count < 5);
+```
+
+**4. `foreach` Loop (for arrays)**
+
+* **Syntax:**
+
+```php
+foreach ($array as $value) {
+    // Code to be executed for each element in the array
+}
+
+// For associative arrays:
+foreach ($array as $key => $value) {
+    // Code to be executed for each key-value pair
+}
+```
+
+* **Explanation:**
+    - Iterates over each element (or key-value pair) in an array.
+
+* **Example:**
+
+```php
+$fruits = array("apple", "banana", "orange");
+
+foreach ($fruits as $fruit) {
+    echo $fruit . "<br>";
+}
+```
+
+**Choosing the Right Loop**
+
+* Use a `for` loop when you know the number of iterations in advance.
+* Use a `while` loop when you don't know the exact number of iterations beforehand.
+* Use a `do-while` loop when you need to execute the code at least once.
+* Use a `foreach` loop specifically for iterating over arrays.
+
