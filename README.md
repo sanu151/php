@@ -1039,3 +1039,74 @@ foreach ($fruits as $fruit) {
 * Use a `do-while` loop when you need to execute the code at least once.
 * Use a `foreach` loop specifically for iterating over arrays.
 
+### `break` statement in PHP.
+
+**What is the `break` Statement?**
+
+* The `break` statement is used to immediately exit a loop (e.g., `for`, `while`, `do-while`, `foreach`). 
+* It terminates the current loop iteration and transfers control to the code following the loop.
+
+**Syntax**
+
+```php
+break; 
+```
+
+![image](https://github.com/user-attachments/assets/6ede585c-db25-4b80-b75a-3f897098127a)
+
+
+**Examples**
+
+**1. In a `for` loop**
+
+```php
+for ($i = 0; $i < 10; $i++) {
+    if ($i == 5) {
+        break; 
+    }
+    echo "Iteration: " . $i . "<br>";
+}
+```
+
+In this example, the loop will iterate from 0 to 4, and then the `break` statement will be encountered when `$i` becomes 5. The loop will then terminate, and the remaining iterations will not be executed.
+
+**2. In a `while` loop**
+
+```php
+$i = 0;
+while ($i < 10) {
+    echo "Iteration: " . $i . "<br>";
+    $i++;
+    if ($i == 5) {
+        break; 
+    }
+}
+```
+
+This example has the same behavior as the `for` loop example.
+
+**3. In a `foreach` loop**
+
+```php
+$fruits = array("apple", "banana", "orange", "grape");
+
+foreach ($fruits as $fruit) {
+    if ($fruit == "banana") {
+        break;
+    }
+    echo $fruit . "<br>";
+}
+```
+
+This loop will iterate through the array and print the fruits until it encounters "banana". Then, the `break` statement will terminate the loop.
+
+**Key Points**
+
+* The `break` statement is used to exit the innermost loop it's contained within.
+* It can be used in any type of loop (`for`, `while`, `do-while`, `foreach`).
+* It's often used within conditional statements (like `if`) to control the flow of the loop based on certain conditions.
+
+**Note:**
+
+* The `break` statement can also be used within `switch` statements to exit the `switch` block.
+
