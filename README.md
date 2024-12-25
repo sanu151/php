@@ -1110,3 +1110,74 @@ This loop will iterate through the array and print the fruits until it encounter
 
 * The `break` statement can also be used within `switch` statements to exit the `switch` block.
 
+### `continue` statement in PHP.
+
+**What is the `continue` Statement?**
+
+* The `continue` statement is used to skip the current iteration of a loop (e.g., `for`, `while`, `do-while`, `foreach`) and immediately proceed to the next iteration. 
+* It doesn't terminate the entire loop; it simply skips the remaining code within the current iteration.
+
+**Syntax**
+
+```php
+continue; 
+```
+
+![image](https://github.com/user-attachments/assets/7fdad75d-21ff-46a8-9962-62ecef8292b8)
+
+
+**Examples**
+
+**1. In a `for` loop**
+
+```php
+for ($i = 0; $i < 5; $i++) {
+    if ($i == 2) {
+        continue; // Skip the rest of this iteration
+    }
+    echo "Iteration: " . $i . "<br>";
+}
+```
+
+In this example, when `$i` becomes 2, the `continue` statement is encountered. The rest of the code within the loop for that iteration (the `echo` statement) is skipped, and the loop proceeds directly to the next iteration where `$i` is 3.
+
+**2. In a `while` loop**
+
+```php
+$i = 0;
+while ($i < 5) {
+    $i++;
+    if ($i == 3) {
+        continue; // Skip the rest of this iteration
+    }
+    echo "Iteration: " . $i . "<br>";
+}
+```
+
+Similar to the `for` loop example, this loop will skip the `echo` statement when `$i` is 3 and continue to the next iteration.
+
+**3. In a `foreach` loop**
+
+```php
+$fruits = array("apple", "banana", "orange", "grape");
+
+foreach ($fruits as $fruit) {
+    if ($fruit == "banana") {
+        continue; // Skip this iteration
+    }
+    echo $fruit . "<br>";
+}
+```
+
+This loop will print all fruits except "banana" because the `continue` statement skips the `echo` statement when the current fruit is "banana".
+
+**Key Points**
+
+* The `continue` statement only affects the current iteration of the loop.
+* It can be used in any type of loop (`for`, `while`, `do-while`, `foreach`).
+* It's often used within conditional statements (like `if`) to control the flow of the loop based on certain conditions.
+
+**Note:**
+
+* The `continue` statement can only be used within a loop.
+
