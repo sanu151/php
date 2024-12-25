@@ -1181,3 +1181,75 @@ This loop will print all fruits except "banana" because the `continue` statement
 
 * The `continue` statement can only be used within a loop.
 
+## **Switch Statement in PHP**
+
+The `switch` statement in PHP is used to execute different blocks of code based on the value of a single expression. It's often used as an alternative to multiple `if-elseif` statements when you need to check a variable against multiple possible values.
+
+**Syntax**
+
+```php
+switch (expression) {
+    case value1:
+        // Code to be executed if expression matches value1
+        break;
+    case value2:
+        // Code to be executed if expression matches value2
+        break;
+    case value3:
+        // Code to be executed if expression matches value3
+        break;
+    // ... more cases
+    default:
+        // Code to be executed if none of the cases match
+}
+```
+
+**Explanation**
+
+1. The `switch` statement starts with the keyword `switch` followed by an expression in parentheses. This expression is evaluated once.
+2. The value of the expression is then compared to each `case` statement.
+3. If a match is found, the code block associated with that `case` is executed.
+4. The `break` statement is crucial within each `case` block. It prevents the execution from "falling through" to the next `case` even if they match.
+5. If none of the `case` statements match the expression, the code within the `default` block (if present) is executed.
+
+**Example**
+
+```php
+$dayOfWeek = "Sunday";
+
+switch ($dayOfWeek) {
+    case "Monday":
+        echo "It's Monday!";
+        break;
+    case "Tuesday":
+        echo "It's Tuesday!";
+        break;
+    case "Wednesday":
+        echo "It's Wednesday!";
+        break;
+    case "Thursday":
+    case "Friday":
+        echo "It's a weekday!";
+        break;
+    case "Saturday":
+    case "Sunday":
+        echo "It's the weekend!";
+        break;
+    default:
+        echo "Invalid day of the week.";
+}
+```
+
+In this example:
+
+- The `switch` statement evaluates the value of `$dayOfWeek`, which is "Sunday".
+- The code then checks each `case` statement.
+- The "Saturday" and "Sunday" cases match, so the message "It's the weekend!" is displayed.
+
+**Key Points:**
+
+* The `break` statement is essential within each `case` block to prevent unintended behavior.
+* Multiple `case` statements can share the same code block by placing them one after another without a `break` between them.
+* The `default` case is optional, but it's recommended to include it for handling unexpected values.
+
+The `switch` statement is a powerful tool for controlling the flow of your PHP code based on the value of an expression. It can often make your code more readable and maintainable compared to multiple nested `if-elseif` statements.
