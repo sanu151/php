@@ -1039,3 +1039,220 @@ foreach ($fruits as $fruit) {
 * Use a `do-while` loop when you need to execute the code at least once.
 * Use a `foreach` loop specifically for iterating over arrays.
 
+### `break` statement in PHP.
+
+**What is the `break` Statement?**
+
+* The `break` statement is used to immediately exit a loop (e.g., `for`, `while`, `do-while`, `foreach`). 
+* It terminates the current loop iteration and transfers control to the code following the loop.
+
+**Syntax**
+
+```php
+break; 
+```
+
+![image](https://github.com/user-attachments/assets/6ede585c-db25-4b80-b75a-3f897098127a)
+
+
+**Examples**
+
+**1. In a `for` loop**
+
+```php
+for ($i = 0; $i < 10; $i++) {
+    if ($i == 5) {
+        break; 
+    }
+    echo "Iteration: " . $i . "<br>";
+}
+```
+
+In this example, the loop will iterate from 0 to 4, and then the `break` statement will be encountered when `$i` becomes 5. The loop will then terminate, and the remaining iterations will not be executed.
+
+**2. In a `while` loop**
+
+```php
+$i = 0;
+while ($i < 10) {
+    echo "Iteration: " . $i . "<br>";
+    $i++;
+    if ($i == 5) {
+        break; 
+    }
+}
+```
+
+This example has the same behavior as the `for` loop example.
+
+**3. In a `foreach` loop**
+
+```php
+$fruits = array("apple", "banana", "orange", "grape");
+
+foreach ($fruits as $fruit) {
+    if ($fruit == "banana") {
+        break;
+    }
+    echo $fruit . "<br>";
+}
+```
+
+This loop will iterate through the array and print the fruits until it encounters "banana". Then, the `break` statement will terminate the loop.
+
+**Key Points**
+
+* The `break` statement is used to exit the innermost loop it's contained within.
+* It can be used in any type of loop (`for`, `while`, `do-while`, `foreach`).
+* It's often used within conditional statements (like `if`) to control the flow of the loop based on certain conditions.
+
+**Note:**
+
+* The `break` statement can also be used within `switch` statements to exit the `switch` block.
+
+### `continue` statement in PHP.
+
+**What is the `continue` Statement?**
+
+* The `continue` statement is used to skip the current iteration of a loop (e.g., `for`, `while`, `do-while`, `foreach`) and immediately proceed to the next iteration. 
+* It doesn't terminate the entire loop; it simply skips the remaining code within the current iteration.
+
+**Syntax**
+
+```php
+continue; 
+```
+
+![image](https://github.com/user-attachments/assets/25acb881-0198-4907-a9c6-fada8adc38d6)
+
+
+**Examples**
+
+**1. In a `for` loop**
+
+```php
+for ($i = 0; $i < 5; $i++) {
+    if ($i == 2) {
+        continue; // Skip the rest of this iteration
+    }
+    echo "Iteration: " . $i . "<br>";
+}
+```
+
+In this example, when `$i` becomes 2, the `continue` statement is encountered. The rest of the code within the loop for that iteration (the `echo` statement) is skipped, and the loop proceeds directly to the next iteration where `$i` is 3.
+
+**2. In a `while` loop**
+
+```php
+$i = 0;
+while ($i < 5) {
+    $i++;
+    if ($i == 3) {
+        continue; // Skip the rest of this iteration
+    }
+    echo "Iteration: " . $i . "<br>";
+}
+```
+
+Similar to the `for` loop example, this loop will skip the `echo` statement when `$i` is 3 and continue to the next iteration.
+
+**3. In a `foreach` loop**
+
+```php
+$fruits = array("apple", "banana", "orange", "grape");
+
+foreach ($fruits as $fruit) {
+    if ($fruit == "banana") {
+        continue; // Skip this iteration
+    }
+    echo $fruit . "<br>";
+}
+```
+
+This loop will print all fruits except "banana" because the `continue` statement skips the `echo` statement when the current fruit is "banana".
+
+**Key Points**
+
+* The `continue` statement only affects the current iteration of the loop.
+* It can be used in any type of loop (`for`, `while`, `do-while`, `foreach`).
+* It's often used within conditional statements (like `if`) to control the flow of the loop based on certain conditions.
+
+**Note:**
+
+* The `continue` statement can only be used within a loop.
+
+## **Switch Statement in PHP**
+
+The `switch` statement in PHP is used to execute different blocks of code based on the value of a single expression. It's often used as an alternative to multiple `if-elseif` statements when you need to check a variable against multiple possible values.
+
+**Syntax**
+
+```php
+switch (expression) {
+    case value1:
+        // Code to be executed if expression matches value1
+        break;
+    case value2:
+        // Code to be executed if expression matches value2
+        break;
+    case value3:
+        // Code to be executed if expression matches value3
+        break;
+    // ... more cases
+    default:
+        // Code to be executed if none of the cases match
+}
+```
+
+**Explanation**
+
+1. The `switch` statement starts with the keyword `switch` followed by an expression in parentheses. This expression is evaluated once.
+2. The value of the expression is then compared to each `case` statement.
+3. If a match is found, the code block associated with that `case` is executed.
+4. The `break` statement is crucial within each `case` block. It prevents the execution from "falling through" to the next `case` even if they match.
+5. If none of the `case` statements match the expression, the code within the `default` block (if present) is executed.
+
+![image](https://github.com/user-attachments/assets/ce8825bd-2631-4604-ba86-7fe6c55ba176)
+
+
+**Example**
+
+```php
+$dayOfWeek = "Sunday";
+
+switch ($dayOfWeek) {
+    case "Monday":
+        echo "It's Monday!";
+        break;
+    case "Tuesday":
+        echo "It's Tuesday!";
+        break;
+    case "Wednesday":
+        echo "It's Wednesday!";
+        break;
+    case "Thursday":
+    case "Friday":
+        echo "It's a weekday!";
+        break;
+    case "Saturday":
+    case "Sunday":
+        echo "It's the weekend!";
+        break;
+    default:
+        echo "Invalid day of the week.";
+}
+```
+
+In this example:
+
+- The `switch` statement evaluates the value of `$dayOfWeek`, which is "Sunday".
+- The code then checks each `case` statement.
+- The "Saturday" and "Sunday" cases match, so the message "It's the weekend!" is displayed.
+
+**Key Points:**
+
+* The `break` statement is essential within each `case` block to prevent unintended behavior.
+* Multiple `case` statements can share the same code block by placing them one after another without a `break` between them.
+* The `default` case is optional, but it's recommended to include it for handling unexpected values.
+
+The `switch` statement is a powerful tool for controlling the flow of your PHP code based on the value of an expression. It can often make your code more readable and maintainable compared to multiple nested `if-elseif` statements.
