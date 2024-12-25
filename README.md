@@ -1123,7 +1123,7 @@ This loop will iterate through the array and print the fruits until it encounter
 continue; 
 ```
 
-![image](https://github.com/user-attachments/assets/7fdad75d-21ff-46a8-9962-62ecef8292b8)
+![image](https://github.com/user-attachments/assets/25acb881-0198-4907-a9c6-fada8adc38d6)
 
 
 **Examples**
