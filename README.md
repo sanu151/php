@@ -1019,6 +1019,9 @@ foreach ($array as $key => $value) {
 * **Explanation:**
     - Iterates over each element (or key-value pair) in an array.
 
+![image](https://github.com/user-attachments/assets/d56763a9-ff12-4331-9f7b-c09c5a1fc82d)
+
+
 * **Example:**
 
 ```php
