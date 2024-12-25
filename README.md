@@ -1212,6 +1212,9 @@ switch (expression) {
 4. The `break` statement is crucial within each `case` block. It prevents the execution from "falling through" to the next `case` even if they match.
 5. If none of the `case` statements match the expression, the code within the `default` block (if present) is executed.
 
+![image](https://github.com/user-attachments/assets/ce8825bd-2631-4604-ba86-7fe6c55ba176)
+
+
 **Example**
 
 ```php
