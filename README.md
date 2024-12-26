@@ -1256,3 +1256,64 @@ In this example:
 * The `default` case is optional, but it's recommended to include it for handling unexpected values.
 
 The `switch` statement is a powerful tool for controlling the flow of your PHP code based on the value of an expression. It can often make your code more readable and maintainable compared to multiple nested `if-elseif` statements.
+
+## **Recursion in PHP**
+
+**What is Recursion?**
+
+* Recursion is a programming technique where a function calls itself within its own definition. 
+
+**How it Works**
+
+1. **Base Case:** A recursive function must have a base case, which is a condition that stops the recursion. Without a base case, the function would call itself indefinitely, leading to a stack overflow error.
+2. **Recursive Step:** The function performs some operations and then calls itself again with modified arguments, moving towards the base case.
+
+**Example: Factorial**
+
+```php
+function factorial($n) {
+    if ($n == 0) { // Base case: factorial of 0 is 1
+        return 1;
+    } else {
+        return $n * factorial($n - 1); // Recursive step
+    }
+}
+
+echo factorial(5); // Output: 120
+```
+
+**Explanation:**
+
+* `factorial(5)`: 
+    - 5 != 0, so it calls `factorial(4)`.
+* `factorial(4)`: 
+    - 4 != 0, so it calls `factorial(3)`.
+* `factorial(3)`: 
+    - 3 != 0, so it calls `factorial(2)`.
+* `factorial(2)`: 
+    - 2 != 0, so it calls `factorial(1)`.
+* `factorial(1)`: 
+    - 1 != 0, so it calls `factorial(0)`.
+* `factorial(0)`: 
+    - 0 == 0, so it returns 1.
+
+Now the function calls unwind:
+
+* `factorial(1)`: Returns 1 * 1 = 1
+* `factorial(2)`: Returns 2 * 1 = 2
+* `factorial(3)`: Returns 3 * 2 = 6
+* `factorial(4)`: Returns 4 * 6 = 24
+* `factorial(5)`: Returns 5 * 24 = 120
+
+**Important Considerations**
+
+* **Base Case:** Essential to prevent infinite recursion.
+* **Stack Overflow:** Recursive functions can lead to stack overflow errors if the depth of recursion is too large.
+* **Performance:** Recursion can sometimes be less efficient than iterative solutions (using loops) due to the overhead of function calls.
+
+**When to Use Recursion**
+
+* Problems that can be naturally expressed in recursive terms (e.g., tree traversals, mathematical functions like factorial, Fibonacci).
+* Divide-and-conquer algorithms (e.g., merge sort, quicksort).
+
+**While recursion can be elegant for certain problems, it's crucial to carefully consider its potential drawbacks and choose the most appropriate approach for each situation.**
