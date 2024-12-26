@@ -1268,6 +1268,8 @@ The `switch` statement is a powerful tool for controlling the flow of your PHP c
 1. **Base Case:** A recursive function must have a base case, which is a condition that stops the recursion. Without a base case, the function would call itself indefinitely, leading to a stack overflow error.
 2. **Recursive Step:** The function performs some operations and then calls itself again with modified arguments, moving towards the base case.
 
+![image](https://github.com/user-attachments/assets/e769139e-15cd-4634-9982-165f1b07b8f9)
+
 **Example: Factorial**
 
 ```php
