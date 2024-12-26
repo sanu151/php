@@ -1366,3 +1366,71 @@ print_r($name_array);
 
 * Use `implode()` to convert an array to a string.
 * Use `explode()` to convert a string into an array.
+
+
+### Case Changing methods in PHP 
+
+**1. `strtolower()`**
+
+* **Purpose:** Converts all characters in a string to lowercase.
+* **Syntax:** `string strtolower(string $string)`
+* **Example:**
+
+```php
+$text = "Hello, World!";
+$lowercase_text = strtolower($text); 
+echo $lowercase_text; // Output: hello, world!
+```
+
+**2. `strtoupper()`**
+
+* **Purpose:** Converts all characters in a string to uppercase.
+* **Syntax:** `string strtoupper(string $string)`
+* **Example:**
+
+```php
+$text = "hello, world!";
+$uppercase_text = strtoupper($text); 
+echo $uppercase_text; // Output: HELLO, WORLD!
+```
+
+**3. `ucfirst()`**
+
+* **Purpose:** Makes the first character of a string uppercase.
+* **Syntax:** `string ucfirst(string $string)`
+* **Example:**
+
+```php
+$text = "hello, world!";
+$capitalized_text = ucfirst($text); 
+echo $capitalized_text; // Output: Hello, world!
+```
+
+**4. `ucwords()`**
+
+* **Purpose:** Makes the first character of each word in a string uppercase.
+* **Syntax:** `string ucwords(string $string)`
+* **Example:**
+
+```php
+$text = "hello, world!";
+$title_case_text = ucwords($text); 
+echo $title_case_text; // Output: Hello, World!
+```
+
+**5. `mb_convert_case()`**
+
+* **Purpose:** A more versatile function for case conversion, especially useful for multibyte characters.
+* **Syntax:** `string mb_convert_case(string $string, int $mode, string $encoding = mb_internal_encoding())`
+
+    * `$mode`: Specifies the type of case conversion (e.g., `MB_CASE_UPPER`, `MB_CASE_LOWER`, `MB_CASE_TITLE`).
+    * `$encoding`: The character encoding of the string (optional).
+
+* **Example:**
+
+```php
+$text = "こんにちは、世界"; 
+$uppercase_text = mb_convert_case($text, MB_CASE_UPPER, "UTF-8"); 
+echo $uppercase_text; 
+```
+
