@@ -1434,3 +1434,68 @@ $uppercase_text = mb_convert_case($text, MB_CASE_UPPER, "UTF-8");
 echo $uppercase_text; 
 ```
 
+
+### **`str_replace()` Function**
+
+* **Purpose:** This function replaces all occurrences of a specified search string with a replacement string within a given string.
+
+* **Syntax:**
+
+```php
+string str_replace(mixed $search, mixed $replace, mixed $subject, int &$count = null) 
+```
+
+* **Parameters:**
+    * `$search`: The value to be searched for. Can be a string, an array of strings, or an object.
+    * `$replace`: The replacement value. Can be a string, an array of strings, or an object.
+    * `$subject`: The input string or an array of strings.
+    * `$count`: (Optional) An integer variable that will be set to the number of replacements performed.
+
+* **Return Value:**
+    - Returns the modified string or an array of modified strings.
+
+**Examples**
+
+**1. Simple Replacement:**
+
+```php
+$text = "Hello world!";
+$new_text = str_replace("world", "everyone", $text);
+echo $new_text; // Output: Hello everyone!
+```
+
+**2. Replace Multiple Occurrences:**
+
+```php
+$text = "This is a test string. This is another test.";
+$new_text = str_replace("test", "example", $text);
+echo $new_text; 
+// Output: This is a example string. This is another example.
+```
+
+**3. Replace with an Array:**
+
+```php
+$text = "apple, banana, orange";
+$search = array("apple", "banana");
+$replace = array("pear", "grape");
+$new_text = str_replace($search, $replace, $text);
+echo $new_text; // Output: pear, grape, orange
+```
+
+**4. Get the Number of Replacements:**
+
+```php
+$text = "Hello world!";
+$new_text = str_replace("world", "everyone", $text, $count);
+echo "Number of replacements: " . $count; // Output: Number of replacements: 1
+```
+
+**Key Points:**
+
+* `str_replace()` is a versatile function for manipulating strings.
+* It can handle single or multiple replacements.
+* It can work with strings and arrays.
+* The `$count` parameter is useful for tracking the number of replacements performed.
+
+I
