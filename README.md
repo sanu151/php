@@ -1498,4 +1498,75 @@ echo "Number of replacements: " . $count; // Output: Number of replacements: 1
 * It can work with strings and arrays.
 * The `$count` parameter is useful for tracking the number of replacements performed.
 
-I
+### `strriv()`. 
+
+The `strrev()` function in PHP is used to **reverse the order of characters** within a string. 
+
+**Syntax:**
+
+```php
+string strrev(string $string)
+```
+
+* **`$string`:** The input string that you want to reverse.
+
+**Example:**
+
+```php
+$original_string = "hello";
+$reversed_string = strrev($original_string); 
+
+echo $reversed_string; // Output: olleh
+```
+
+**How it Works:**
+
+The `strrev()` function takes the given string as input and creates a new string with the characters in the opposite order.
+
+**Key Points:**
+
+* **Simple Usage:** It's a straightforward function to use for basic string reversal.
+* **No Modifications to Original String:** The `strrev()` function does not modify the original string. It returns a new string with the reversed characters.
+* **Limited for Multibyte Characters:** For strings with multibyte characters (e.g., characters in languages like Chinese, Japanese, Korean), it might not always produce the desired results. In such cases, consider using `mb_strrev()` from the `mbstring` extension, which is designed to handle multibyte characters correctly.
+
+### **`substr()` function in PHP**
+
+* **Purpose:** Extracts a part (substring) from a string.
+
+* **Syntax:**
+
+   ```php
+   string substr(string $string, int $start, int $length = null)
+   ```
+
+   * `$string`: The input string.
+   * `$start`: The starting position of the substring. 
+      * If `$start` is non-negative, the position of the first character is 0.
+      * If `$start` is negative, the position of the first character is counted from the end of the string.
+   * `$length`: (Optional) The maximum length of the substring. 
+      * If `$length` is omitted, the substring will extend to the end of the string.
+
+* **Examples:**
+
+   ```php
+   $str = "Hello, world!";
+
+   // Extract characters starting from position 7 
+   $substr1 = substr($str, 7); 
+   echo $substr1; // Output: world!
+
+   // Extract 5 characters starting from position 0
+   $substr2 = substr($str, 0, 5); 
+   echo $substr2; // Output: Hello
+
+   // Extract 3 characters starting from the end of the string
+   $substr3 = substr($str, -3); 
+   echo $substr3; // Output: ld! 
+   ```
+
+* **Key Points:**
+
+   * `substr()` is a versatile function for manipulating strings.
+   * You can use it to extract specific parts of a string, such as usernames, file extensions, or parts of URLs.
+   * The `$start` parameter can be negative to count positions from the end of the string.
+
