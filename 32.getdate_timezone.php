@@ -1,5 +1,5 @@
 <?php
-// Date function
+// date_default_timezone, getdate
 date_default_timezone_set("Asia/Kolkata");
 
 echo "<pre>";
