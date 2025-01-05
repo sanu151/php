@@ -1853,3 +1853,52 @@ echo $date->format('Y-m-d H:i:s');
 * **Format Characters:** Refer to the PHP documentation for a complete list of format characters for the `date()` function.
 * **Object-Oriented Approach:** The `DateTime` class provides a more advanced and flexible way to work with dates and times.
 
+### **`include()` and `include_once()` in PHP**
+
+These functions are used to include the contents of another PHP file within the current script. 
+
+* **`include()`:** 
+    - Includes and evaluates the specified file.
+    - Includes the file every time it's encountered in the script, even if it has already been included.
+    - **Warning:** If the included file cannot be found, it generates a warning and continues script execution.
+
+* **`include_once()`:**
+    - Includes and evaluates the specified file only once. 
+    - If the file has already been included, it will not be included again.
+    - **Warning:** If the included file cannot be found, it generates a warning and continues script execution.
+
+**`require()` and `require_once()`**
+
+Similar to `include()` and `include_once()`, these functions also include and evaluate files. However:
+
+* **`require()`:** 
+    - Includes and evaluates the specified file.
+    - If the included file cannot be found, it generates a fatal error and stops script execution.
+
+* **`require_once()`:** 
+    - Includes and evaluates the specified file only once.
+    - If the included file cannot be found, it generates a fatal error and stops script execution.
+
+**When to Use Which**
+
+* **`include()` / `include_once()`:** When the included file is optional (e.g., a template file).
+* **`require()` / `require_once()`:** When the included file is essential for the script to function (e.g., a configuration file, a database connection file).
+
+**Example**
+
+```php
+// In your main script (index.php)
+
+include_once('header.php'); // Include header once
+
+// ... your main script code ...
+
+include('footer.php'); // Include footer 
+```
+
+**Key Considerations**
+
+* Proper file inclusion is crucial for organizing and maintaining your PHP projects.
+* Use `include_once()` or `require_once()` to avoid duplicate code inclusions and potential errors.
+* Choose between `include()`/`include_once()` and `require()`/`require_once()` based on the importance of the included file for the script's functionality.
+
