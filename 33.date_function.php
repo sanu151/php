@@ -35,6 +35,9 @@
 // T: Timezone abbreviation
 // Z: Timezone offset in seconds from UTC
 date_default_timezone_set('Asia/Kolkata');
-echo date('d / F(m) / Y [H:i:s] - l' );
+echo date('d / F(m) / Y [h:i:s a] - l' );
+echo "<br>";
+$str = strtotime('23-07-1987 20:00:00');
+echo date('d - F - Y h:i:s-a', $str);
 
 ?>
